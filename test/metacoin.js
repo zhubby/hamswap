@@ -26,7 +26,7 @@ contract('MetaCoin', (accounts) => {
     const accountTwoStartingBalance = (await metaCoinInstance.getBalance.call(accountTwo)).toNumber();
 
     // Make transaction from first account to second.
-    const amount = 10;
+    const amount = 1000;
     await metaCoinInstance.sendCoin(accountTwo, amount, { from: accountOne });
 
     // Get balances of first and second account after the transactions.
